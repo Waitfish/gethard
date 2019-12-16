@@ -33,5 +33,6 @@ MARIADB_105    内存利用率已经超出 90%
 ```
 ## build for linux amd64
 ```bash
-env GOOS=linux GOARCH=amd64 go build gethard.go
+env GOOS=linux GOARCH=amd64 
+go build gethard.go
 ```
