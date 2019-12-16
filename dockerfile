@@ -12,7 +12,7 @@ ADD . /app
 WORKDIR /app
   # we run go build to compile the binary
   # executable of our Go program
-RUN go get github.com/imroc/req
+RUN go get github.com/imroc/req && go get github.com/shirou/gopsutil
 RUN go build -o gethard .
   # Our start command which kicks off
   # our newly created binary executable
