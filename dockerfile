@@ -1,4 +1,4 @@
-FROM golang:1.12.0-alpine3.9
+FROM golang
   # We create an /app directory within our
   # image that will hold our application source
   # files
@@ -12,7 +12,7 @@ ADD . /app
 WORKDIR /app
   # we run go build to compile the binary
   # executable of our Go program
-RUN go mod download
+RUN go get github.com/imroc/req
 RUN go build -o gethard .
   # Our start command which kicks off
   # our newly created binary executable
